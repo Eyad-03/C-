@@ -19,6 +19,15 @@ namespace task1
             string gender = "Male";
             bool isActive = true;
 
+            Console.WriteLine("student Name is : " + studentName);
+            Console.WriteLine("student age is : " + age);
+            Console.WriteLine("student grde is : " + grde);
+            Console.WriteLine("student average is : " + average);
+            Console.WriteLine("student gender is : " + gender);
+            Console.WriteLine("student isActive is : " + isActive);
+
+            Console.WriteLine("---------------------------------------------------");
+
 
             // part 2
 
@@ -27,9 +36,11 @@ namespace task1
             Console.WriteLine("students Name is : " + students[0]);
             Console.WriteLine("students Name is : " + students[1]);
             Console.WriteLine("students Name is : " + students[2]);
-
             Console.WriteLine("Number of Students : " + students.Length);
 
+            Console.WriteLine("---------------------------------------------------");
+
+            Console.WriteLine("before modification");
 
             Console.WriteLine(students[0]);
             Console.WriteLine(students[1]);
@@ -39,7 +50,9 @@ namespace task1
             students[1] = "khalid";
             students[2] = "ahmed";
 
-            Console.WriteLine("after modification>");
+            Console.WriteLine("---------------------------------------------------");
+
+            Console.WriteLine("after modification");
 
             Console.WriteLine(students[0]);
             Console.WriteLine(students[1]);

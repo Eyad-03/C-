@@ -1,4 +1,7 @@
 <Solution>
-  <Project Path="../task1/task1.csproj" />
-  <Project Path="variable/variable.csproj" />
+  <Project Path="../task1/task1.csproj" Id="3c049f81-38e6-4e27-957b-483877f2d7a6" />
+  <Project Path="../task2/task2.csproj" Id="be00af84-354b-40f8-aaa1-2635b6f9ca9e" />
+  <Project Path="../task3/task3.csproj" Id="84f6cd82-b3ab-4e86-b78a-f20314e46b37" />
+  <Project Path="test/test.csproj" Id="70f70448-621e-4c0d-a085-799aac542d94" />
+  <Project Path="variable/variable.csproj" Id="80abc497-12dd-478d-bfdc-b3b1cca868ad" />
 </Solution>
