@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,53 +11,133 @@ namespace task1
     {
         static void Main(string[] args)
         {
-            // part 1
+            
+            string[] students = {"Eyad", "Omar", "Mohammed","Wadea","Saif"};
 
-            string studentName = "Eyad";
-            int age = 20;
-            int grde = 90;
-            double average = 90.5;
-            string gender = "Male";
-            bool isActive = true;
+            void PrintStudents()
+            {
 
-            Console.WriteLine("student Name is : " + studentName);
-            Console.WriteLine("student age is : " + age);
-            Console.WriteLine("student grde is : " + grde);
-            Console.WriteLine("student average is : " + average);
-            Console.WriteLine("student gender is : " + gender);
-            Console.WriteLine("student isActive is : " + isActive);
+            for(int i = 0; i < students.Length; i++)
+            {
+                Console.WriteLine($"Student {i + 1}: {students[i]}");
+            }
 
-            Console.WriteLine("---------------------------------------------------");
+            }
 
 
-            // part 2
 
-            string [] students = { "Eyad", "omar", "Mohammed" };
+            int[] grades = { 85, 90, 78, 92, 88 };
 
-            Console.WriteLine("students Name is : " + students[0]);
-            Console.WriteLine("students Name is : " + students[1]);
-            Console.WriteLine("students Name is : " + students[2]);
-            Console.WriteLine("Number of Students : " + students.Length);
+            void printGrades()
+            {
 
-            Console.WriteLine("---------------------------------------------------");
+            foreach(var grade in grades)
+            {
+                Console.WriteLine($"Grade: {grade}");
+            }
 
-            Console.WriteLine("before modification");
+            }
 
-            Console.WriteLine(students[0]);
-            Console.WriteLine(students[1]);
-            Console.WriteLine(students[2]);
 
-            students[0] = "tariq";
-            students[1] = "khalid";
-            students[2] = "ahmed";
+            void searchStudents()
+            {
+                Console.WriteLine("Enter the name of the student to search:");
+                string searchStudent = Console.ReadLine();
+                int j = 0;
 
-            Console.WriteLine("---------------------------------------------------");
+            while(j<students.Length)
+            {
+               
+                    if(students[j] == searchStudent)
+                    {
+                        Console.WriteLine($"Found student: {students[j]}");
+                        break;
+                    }
 
-            Console.WriteLine("after modification");
+                j++;
+                
+            }
 
-            Console.WriteLine(students[0]);
-            Console.WriteLine(students[1]);
-            Console.WriteLine(students[2]);
+            
+
+            }
+
+            void RangeGrade()
+            {
+
+            Console.WriteLine("Enter a grade between 0 and 100:");
+            int userGrade = Convert.ToInt32(Console.ReadLine());
+
+            if(userGrade>=90 && userGrade<=100)
+            {
+                Console.WriteLine("Excellent");
+            }
+
+            else if (userGrade >= 80 && userGrade <= 89)
+            {
+                Console.WriteLine("Very Good");
+            }
+
+            else if(userGrade >= 70 && userGrade <= 79)
+            {
+                Console.WriteLine("Good");
+            }
+
+            else if (userGrade >=60 && userGrade<=69)
+            {
+                Console.WriteLine("Pass");
+            }
+
+            else
+            {
+                Console.WriteLine("Fail");
+            }
+
+            }
+
+            int choice = 0;
+
+            do
+            {
+
+                Console.WriteLine("Choose an option:");
+                Console.WriteLine("1. Print Students");
+                Console.WriteLine("2. Print Grades");
+                Console.WriteLine("3. Search Students");
+                Console.WriteLine("4. Range Grade");
+                Console.WriteLine("5. Exit");
+
+                choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        PrintStudents();
+                        break;
+
+                    case 2:
+                        printGrades();
+                        break;
+
+                    case 3:
+                        searchStudents();
+                        break;
+
+                    case 4:
+                        RangeGrade();
+                        break;
+
+                    case 5:
+                        Environment.Exit(0);
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid option. Please try again.");
+                        break;
+                }
+
+
+            } while (choice != 5);
 
 
 
