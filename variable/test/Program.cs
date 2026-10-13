@@ -1,32 +1,42 @@
 ﻿using System;
+using test;
 
 class Program
 {
     static void Main(string[] args)
     {
-        string name = "Sara";
-        int age = 24;
+        Student student = new Student();
 
-        // String Interpolation
-        Console.WriteLine($"My name is {name} and I am {age} years old.");
+        student.Name = "Ahmad"; // set
+        student.Age = 22;       // set
 
-        // Access String Characters using Index
-        Console.WriteLine($"First character: {name[0]}");
-        Console.WriteLine($"Second character: {name[1]}");
-        Console.WriteLine($"Last character: {name[name.Length - 1]}");
+        Console.WriteLine(student.Name); // get
 
-        // Special Character \n
-        Console.WriteLine("Hello\nWelcome to C#");
 
-        // Special Character \t
-        Console.WriteLine("Name\tAge");
-        Console.WriteLine($"{name}\t{age}");
+        //  Auto Property
 
-        // Special Character "
-        Console.WriteLine("She said \"Hello\"");
 
-        Console.WriteLine("She said \\Hello\\");
+        /*
+        Student studentAuto = new Student
+        {
+            Name = "Ahmad",
+            Age = 22
+        };
 
-        Console.WriteLine("She said \'Hello\'");
+        Console.WriteLine(studentAuto.Name);
+        Console.WriteLine(studentAuto.Age);
+        */
+
+
+        // Access Modifiers
+
+        Employee emp = new Employee();
+
+        Console.WriteLine(emp.Name);       // ✅ مسموح
+        // Console.WriteLine(emp.Salary);  // ❌ خطأ
+        // Console.WriteLine(emp.Department); // ❌ خطأ
+
+
+
     }
 }
