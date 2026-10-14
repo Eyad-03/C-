@@ -20,7 +20,7 @@ namespace task6
 
         public override void TakeDamage(int amount)
         {
-            Health -= amount + 2; 
+            Health = (Health- amount) + 2; 
         }
 
     }

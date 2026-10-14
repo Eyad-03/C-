@@ -9,7 +9,6 @@ namespace task6
     abstract class GameCharacter
     {
 
-        private string _name;
 
         private int _health;
 
@@ -28,14 +27,15 @@ namespace task6
                 else
                 {
                     Console.WriteLine("Health must be between 0 and 100.");
+                    Environment.Exit(1);
                 }
             }
         }
 
         public GameCharacter(string name, int health)
         {
-            _name = name;
-            _health = health;
+            Name = name;
+            Health = health;
         }
 
         public abstract void UseSpecialAbility();

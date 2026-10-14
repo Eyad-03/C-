@@ -22,7 +22,7 @@ namespace task6
         {
             try
             {
-                int amount = int.Parse(amountText);
+                int amount = Convert.ToInt32(amountText);
 
                 character.Heal(amount);
 

@@ -19,6 +19,6 @@ namespace task6
         {
             Health -= amount;
         }
-    {
+    
     }
 }
