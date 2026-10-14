@@ -4,6 +4,7 @@
   <Project Path="../task2/task2.csproj" Id="be00af84-354b-40f8-aaa1-2635b6f9ca9e" />
   <Project Path="../task3/task3.csproj" Id="84f6cd82-b3ab-4e86-b78a-f20314e46b37" />
   <Project Path="../task5/task5.csproj" Id="7e93ce2b-722b-4626-8ff2-694e1f19d618" />
+  <Project Path="../task6/task6.csproj" Id="31ee5b31-25aa-4dfc-ba04-85911bd940ca" />
   <Project Path="test/test.csproj" Id="70f70448-621e-4c0d-a085-799aac542d94" />
   <Project Path="variable/variable.csproj" Id="80abc497-12dd-478d-bfdc-b3b1cca868ad" />
 </Solution>

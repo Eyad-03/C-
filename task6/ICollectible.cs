@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace test
+namespace task6
 {
-    class Students
+    internal interface ICollectible
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
+         void Collect();
     }
 }
